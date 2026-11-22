@@ -3,6 +3,7 @@
 *.rar
 *.tar.xz
 *.7z
+*.apk
 
 # Partition and filesystem images
 *.img
