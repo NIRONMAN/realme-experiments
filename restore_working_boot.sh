@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-SERIAL="${1:-8PLNBUD6FUEAPRHY}"
+SERIAL="${1:-${DEVICE_SERIAL:-device}}"
 BACKUP="/home/niro/Projects/realme-experiments/live_working_boot_backup.img"
 
 echo "=== Restoring Known Working Boot Image (Emergency Rollback) ==="

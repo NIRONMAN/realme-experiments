@@ -10,14 +10,14 @@ echo "=================================================================="
 echo ""
 
 # Reboot to bootloader if on ADB
-if adb devices | grep -q "8PLNBUD6FUEAPRHY.*device"; then
+if adb devices | grep -q "${DEVICE_SERIAL:-device}.*device"; then
     echo "[*] Rebooting device into Fastboot mode..."
-    adb -s 8PLNBUD6FUEAPRHY reboot bootloader
+    adb -s ${DEVICE_SERIAL:-device} reboot bootloader
 fi
 
 echo "[*] Waiting for device in Fastboot mode..."
 count=0
-while ! fastboot devices | grep -q "8PLNBUD6FUEAPRHY"; do
+while ! fastboot devices | grep -q "${DEVICE_SERIAL:-device}"; do
     sleep 1
     count=$((count + 1))
     if [ "$count" -ge 30 ]; then

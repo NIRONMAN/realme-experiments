@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-SERIAL="${1:-8PLNBUD6FUEAPRHY}"
+SERIAL="${1:-${DEVICE_SERIAL:-device}}"
 TARGET_DIR="/data/debian"
 ROOTFS_URL="https://blr1mirror01.do.images.linuxcontainers.org/images/debian/bookworm/arm64/default/20261118_05:24/rootfs.tar.xz"
 TMP_ARCHIVE="/data/local/tmp/debian-rootfs.tar.xz"

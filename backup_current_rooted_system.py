@@ -16,7 +16,7 @@ import subprocess
 import hashlib
 from datetime import datetime
 
-DEVICE_SERIAL = "8PLNBUD6FUEAPRHY"
+DEVICE_SERIAL = os.getenv("DEVICE_SERIAL", "")
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 BACKUP_DIR = os.path.join(BASE_DIR, "backup-rooted-a19-live")
 PART_DIR = os.path.join(BACKUP_DIR, "partitions")

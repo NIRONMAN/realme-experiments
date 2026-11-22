@@ -3,7 +3,7 @@
 # Realme 8 4G: Linux Chroot Launcher & Service Starter
 # ==============================================================================
 
-SERIAL="${1:-8PLNBUD6FUEAPRHY}"
+SERIAL="${1:-${DEVICE_SERIAL:-device}}"
 DIR="/data/debian"
 
 echo "=== Starting Linux Server on Realme 8 ($SERIAL) ==="

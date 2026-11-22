@@ -63,8 +63,8 @@ Our audit discovered the exact hardware charging control nodes for the Realme 8:
 
 ### Step 1: Deploy Battery Guard on Device
 ```bash
-adb -s 8PLNBUD6FUEAPRHY push scripts/battery_guard.sh /data/adb/service.d/01-battery-guard.sh
-adb -s 8PLNBUD6FUEAPRHY shell "chmod 755 /data/adb/service.d/01-battery-guard.sh"
+adb -s ${DEVICE_SERIAL:-device} push scripts/battery_guard.sh /data/adb/service.d/01-battery-guard.sh
+adb -s ${DEVICE_SERIAL:-device} shell "chmod 755 /data/adb/service.d/01-battery-guard.sh"
 ```
 
 ### Step 2: Bootstrap Debian 12 Chroot

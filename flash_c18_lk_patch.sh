@@ -14,9 +14,9 @@ echo "=================================================================="
 echo ""
 
 # Power off phone if currently on ADB
-if adb devices | grep -q "8PLNBUD6FUEAPRHY.*device"; then
+if adb devices | grep -q "${DEVICE_SERIAL:-device}.*device"; then
     echo "Phone detected via ADB. Powering down cleanly now..."
-    adb -s 8PLNBUD6FUEAPRHY shell "reboot -p" || true
+    adb -s ${DEVICE_SERIAL:-device} shell "reboot -p" || true
     echo "Phone is shutting down. Please UNPLUG the USB cable from the phone."
     sleep 4
 fi

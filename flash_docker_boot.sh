@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-SERIAL="${1:-8PLNBUD6FUEAPRHY}"
+SERIAL="${1:-${DEVICE_SERIAL:-device}}"
 IMAGE="/home/niro/Projects/realme-experiments/boot_docker_nashc.img"
 
 echo "=== Flashing Docker-Enabled Boot Image to Realme 8 ($SERIAL) ==="
