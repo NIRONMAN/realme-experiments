@@ -85,6 +85,7 @@ EOF
 echo "=== [6/6] Launching OpenSSH & Docker Daemon ==="
 chroot $DIR /bin/bash -c "
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+hostname \$(cat /etc/hostname 2>/dev/null || echo 'friday') 2>/dev/null || true
 mount --make-rprivate / 2>/dev/null || true
 mkdir -p /run/sshd /var/run/sshd
 /usr/sbin/sshd 2>/dev/null || true
