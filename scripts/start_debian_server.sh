@@ -71,6 +71,17 @@ cat << 'EOF' > $DIR/etc/docker/daemon.json
 }
 EOF
 
+# Ensure OpenSSH server configuration (disable DNS lookup to prevent private IP handshake timeouts)
+mkdir -p $DIR/etc/ssh/sshd_config.d
+cat << 'EOF' > $DIR/etc/ssh/sshd_config.d/00-server.conf
+PermitRootLogin yes
+PasswordAuthentication yes
+PubkeyAuthentication yes
+UseDNS no
+ClientAliveInterval 15
+ClientAliveCountMax 4
+EOF
+
 echo "=== [6/6] Launching OpenSSH & Docker Daemon ==="
 chroot $DIR /bin/bash -c "
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
