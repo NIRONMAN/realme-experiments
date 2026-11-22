@@ -1,0 +1,29 @@
+# Large firmware downloads and archives
+*.zip
+*.rar
+*.tar.xz
+*.7z
+
+# Partition and filesystem images
+*.img
+*.bin
+
+# Firmware and backup folders
+(A.19)*
+RMX3085_*
+SP_Flash_Tool_*
+firmware-backup/
+backup-rooted-a19-live/
+mtkclient/
+
+# Toolchain and kernel build outputs
+kernel/source/
+kernel/toolchain/
+out/
+.venv/
+__pycache__/
+*.pyc
+
+# Logs and temporary files
+*.log
+tmp/

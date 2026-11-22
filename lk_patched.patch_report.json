@@ -1,0 +1,26 @@
+{
+    "timestamp": "20261121_234248",
+    "image": "/home/niro/Projects/realme-experiments/(A.19)REALME_8_4G_STOCK_ROM_DECRYPTED_GLOBAL_BY_HAADI/lk.img",
+    "image_version": 1,
+    "total_patches": 6,
+    "applied_patches": 3,
+    "skipped_patches": 3,
+    "dry_run": false,
+    "security_policies_patched": false,
+    "results": {
+        "fastboot": {
+            "2de9f04fadf5ac5d": false,
+            "f0b5adf5925d": true
+        },
+        "dm_verity": {
+            "30b583b002ab0022": false
+        },
+        "orange_state": {
+            "08b50a4b7b441b681b68022b": true,
+            "08b50e4b7b441b681b68022b": false
+        },
+        "red_state": {
+            "f0b5002489b0": true
+        }
+    }
+}

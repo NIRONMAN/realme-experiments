@@ -1,0 +1,26 @@
+{
+    "timestamp": "20261122_010907",
+    "image": "/home/niro/Projects/realme-experiments/RMX3085_C.18_IN_FW_by_SG/lk.img",
+    "image_version": 1,
+    "total_patches": 6,
+    "applied_patches": 4,
+    "skipped_patches": 2,
+    "dry_run": false,
+    "security_policies_patched": false,
+    "results": {
+        "fastboot": {
+            "2de9f04fadf5ac5d": false,
+            "f0b5adf5925d": true
+        },
+        "dm_verity": {
+            "30b583b002ab0022": true
+        },
+        "orange_state": {
+            "08b50a4b7b441b681b68022b": true,
+            "08b50e4b7b441b681b68022b": false
+        },
+        "red_state": {
+            "f0b5002489b0": true
+        }
+    }
+}
